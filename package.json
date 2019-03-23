@@ -1,0 +1,20 @@
+{
+  "name": "cypress-protobuf",
+  "version": "1.0.0",
+  "description": "Encode a Cypress fixture with Protocol Buffers",
+  "main": "src/index.js",
+  "repository": "https://github.com/NoriSte/cypress-protobuf.git",
+  "author": "NoriSte <nori.ste.magni@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "cz-conventional-changelog": "^2.1.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "scripts": {
+    "commit": "npx git-cz"
+  }
+}
