@@ -16,5 +16,8 @@
   },
   "scripts": {
     "commit": "npx git-cz"
+  },
+  "dependencies": {
+    "protobufjs": "6.8.8"
   }
 }
