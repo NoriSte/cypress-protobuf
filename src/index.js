@@ -3,15 +3,18 @@ const protobufjs = require("protobufjs");
 
 let previousProtoFilePath;
 
-module.exports = on => {
-  on("task", {
-    protobufEncode: ({ fixtureBody, message, protoFilePath }) => {
+module.exports = ({ fixtureBody, message, protoFilePath } = {}) => {
       if(protoFilePath) {
         previousProtoFilePath = protoFilePath;
       }
       const protoPath = previousProtoFilePath;
-      if(protoPath) {
+      if(!protoPath) {
         throw new Error("No proto file path has been provided.");
+      }
+
+      // allows to set the proto file path in advance
+      if(!message || !fixtureBody) {
+        return null;
       }
 
       const proto = protobufjs.loadSync(protoPath);
@@ -20,5 +23,3 @@ module.exports = on => {
       const bufferValue = protoMessage.encode(fixtureBody).finish();
       return decoder.end(Buffer.from(bufferValue));
     }
-  });
-};
