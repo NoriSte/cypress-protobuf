@@ -1,5 +1,7 @@
-# cypress-protobuf
+# Cypress Protocol Buffers
 Encode a fixture with Protocol Buffers
+
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 ![Cypress Protobuf](assets/cy-protobuf.jpg)
 
@@ -58,13 +60,3 @@ before(() => {
   });
 });
 ```
-<br /><br /><br /><br />
-features
-
-- save the last proto file path
-- allow to set the proto file path in advance
-TODO
-- add a cypress example
-- add travis
-- add badges
-- spread it (to the cypress plugin list too)
