@@ -5,7 +5,7 @@ Encode a fixture with Protocol Buffers
 
 ![Cypress Protobuf](assets/cy-protobuf.jpg)
 
-Use this plugin to encode with [Protocol Buffers](https://developers.google.com/protocol-buffers/) a Cypress fixture.
+Use this plugin to encode a [Cypress](https://www.cypress.io) fixture with [Protocol Buffers](https://developers.google.com/protocol-buffers/).
 
 # Installation
 ```bash
@@ -26,12 +26,12 @@ module.exports = on => {
 # How to use it
 To encode with Protocl Buffers a fixture
 ```javascript
-cy.fixture("usb-key/status_one_usb_key.json")
+cy.fixture("FIXTURE_NAME.json")
   .then(json => {
     cy.task("protobufEncode", {
       fixtureBody: json, // the fixture body
-      message: "Status", // the protobuf message to use
-      protoFilePath: "./public/ui.proto", // the path (starting from your project directory) to the .profo file
+      message: "MESSAGE_NAME", // the protobuf message to use
+      protoFilePath: "./public/example.proto", // the path (starting from your project directory) to the .profo file
     })
   .then(encodedJson => {
     // 🎉 `encodedJson` contains the encoded fixture
@@ -41,7 +41,7 @@ cy.fixture("usb-key/status_one_usb_key.json")
       },
       response: encodedJson,
       url: 'API_URL'
-    }).as("YOUR_FIXTURE_NAME");
+    }).as("FIXTURE_NAME");
   });
 });
 ```
