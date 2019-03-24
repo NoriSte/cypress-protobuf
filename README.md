@@ -24,7 +24,7 @@ module.exports = on => {
 ```
 
 # How to use it
-To encode with Protocl Buffers a fixture
+To encode with Protocol Buffers a fixture
 ```javascript
 cy.fixture("FIXTURE_NAME.json")
   .then(json => {
@@ -50,6 +50,8 @@ and in your test you will wait for the request as usual
 ```javascript
 cy.wait("@YOUR_FIXTURE_NAME");
 ```
+
+Take a look at the [example test](cypress/integration/cypress-protobuf.test.js) source code.
 
 # Tips
 - the plugin saves the last `protoFilePath` so you can avoid to pass it every time. You can even set it at the beginning of your test suite
