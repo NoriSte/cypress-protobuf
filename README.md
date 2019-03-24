@@ -6,7 +6,7 @@ Encode a fixture with Protocol Buffers
 [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 
 
-![Cypress Protobuf](assets/cy-protobuf.jpg)
+<img src="assets/cy-protobuf.jpg" alt="Cypress Protobuf" style="width:400px;"/>
 
 Use this plugin to encode a [Cypress](https://www.cypress.io) fixture with [Protocol Buffers](https://developers.google.com/protocol-buffers/).
 
