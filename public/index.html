@@ -1,0 +1,29 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cypress Protobuf</title>
+    <script>
+    async function loadProtobuf() {
+      console.log(window.protobuf);
+      const proto = await window.protobuf.load("example.proto");
+      const message = proto.lookupType("Example")
+      const response = await axios.get("/protobuf-message", {
+        responseType: "arraybuffer"
+      });
+      data = message.decode(new Uint8Array(response.data));
+      document.getElementById("response").innerHTML = JSON.stringify(data, null, 2);
+    }
+    </script>
+  </head>
+  <body>
+    <div id="app">
+      <button onClick="javascript:loadProtobuf()">Load Protobuf</button>
+      <pre id="response"></pre>
+    </div>
+    <script src="scripts/protobuf.min.js"></script>
+    <script src="scripts/axios.min.js"></script>
+  </body>
+</html>
