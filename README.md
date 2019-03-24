@@ -2,6 +2,9 @@
 Encode a fixture with Protocol Buffers
 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![Build Status](https://travis-ci.com/NoriSte/cypress-protobuf.svg?branch=master)](https://travis-ci.com/NoriSte/cypress-protobuf)
+[![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
+
 
 ![Cypress Protobuf](assets/cy-protobuf.jpg)
 
@@ -26,7 +29,7 @@ module.exports = on => {
 # How to use it
 To encode with Protocol Buffers a fixture
 ```javascript
-cy.fixture("FIXTURE_NAME.json")
+cy.fixture("FIXTURE_NAME.json+")
   .then(json => {
     cy.task("protobufEncode", {
       fixtureBody: json, // the fixture body
