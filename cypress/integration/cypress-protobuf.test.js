@@ -33,7 +33,7 @@ context('Actions', () => {
 
     cy.get("button").click();
     cy.wait("@example");
-    cy.get("#response").contains("Hello from the Cypress Protobuf plugin");
+    cy.get("#response").contains(`"Message": "Hello from the Cypress Protobuf plugin"`);
   });
   })
 })
