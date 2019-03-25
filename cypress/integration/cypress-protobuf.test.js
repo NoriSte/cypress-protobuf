@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-context('Actions', () => {
+context('Tests', () => {
   it('The fixture encoding should work', () => {
     // go to the baseUrl page (see cypress.json)
     cy.visit('/')
