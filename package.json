@@ -14,7 +14,7 @@
   "license": "MIT",
   "devDependencies": {
     "cz-conventional-changelog": "3.0.2",
-    "start-server-and-test": "1.10.4"
+    "start-server-and-test": "1.10.5"
   },
   "config": {
     "commitizen": {
