@@ -30,7 +30,7 @@
     "cy:run": "cypress run"
   },
   "dependencies": {
-    "cypress": "^4.0.0",
+    "cypress": "^8.0.0",
     "protobufjs": "6.10.1"
   }
 }
